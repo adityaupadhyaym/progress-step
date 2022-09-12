@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: azure;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  
+}
+/* .line::after {
+    content: '';
+    width: 300px;
+    height: 5px;
+    background-color: rgb(204,182,182);
+    z-index: -1;
+    position: absolute; 
+   left: 0px;
+} */
+.bgLine {
+    width: 300px;
+    height: 5px;
+    background-color: burlywood;
+    position: absolute;
+}
+
+.line {
+    height: 100%;
+    width: 0%;
+    background: blue;
+    transition: linear 0.5s  ;
+}
+.span-wrapper {
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+span {
+    height: 30px;
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: 3px solid burlywood;
+    z-index: 2;
+    background-color: white;
+
+}
+.button-wrapper  {
+    width: 300px;
+    margin: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   
+
+    
+}
+.btn-prev {
+    border: none;
+    clip-path: polygon(100% 0%, 87% 49%, 100% 100%, 19% 98%, 0% 50%, 19% 0);
+    width: 30%;
+    padding: 6px;
+    background-image: linear-gradient(to left, #E478FB, rgb(124,108,250));
+    color: white;
+    font-weight: 500;
+  
+
+}
+.btn-next {
+    border: none;
+    clip-path: polygon(84% 0, 100% 50%, 85% 100%, 0% 100%, 10% 48%, 0% 0%);
+    width: 30%;
+    padding: 6px;
+    background-image: linear-gradient(to right, #E478FB, rgb(124,108,250));
+    color: white;
+    font-weight: 500;
+
+
+}
+
+.button-wrapper > .btn-prev:hover {
+    background-image: linear-gradient(to right, #E478FB, rgb(124,108,250));
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+
+}
+.button-wrapper > .btn-next:hover {
+    background-image: linear-gradient(to left, #E478FB, rgb(124,108,250));
+    color: white;
+cursor: pointer;
+
+
+}
+.active {
+    border-color: blue;
+    transition-delay:0.5s ;
+
+}
+.btnDisable {
+   opacity: 0.1;
+   cursor: not-allowed;
+}
